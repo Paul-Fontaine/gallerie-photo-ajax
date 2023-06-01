@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="Paul Fontaine">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Galerie photo</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+
+    <!-- external libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+            integrity="sha256-x3YZWtRjM8bJqf48dFAv/qmgL68SI4jqNWeSLMZaMGA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    <!-- my scripts -->
+    <script src="js/ajax.js"></script>
+    <script src="js/loading.js"></script>
+</head>
+<body class="m-4">
+<section id="errors" class="container alert alert-danger"></section>
+
+<section id="authentification" class="container"></section>
+
+<div class="row">
+<div class="col-md-8">
+<h1>Photos Gallery</h1>
+<section id="thumbnails" class="row"></section>
+
+<section id="photo"></section>
+
+<section id="comments"></section>
+
+<section id="comments-add" class="container"> <!--class="d-none"-->
+    <form>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Commentaire ></span>
+            </div>
+            <input type="text" class="form-control" id="comment-input" placeholder="Entrez votre commentaire" autofocus required>
+            <button type="submit" class="btn btn-success float-right">
+                <i class="fa fa-paper-plane"></i> Envoyer
+            </button>
+        </div>
+    </form>
+</section>
+</div>
+<div class="col-md-4">
+<section id="chat"></section>
+</div>
+</div>
+
+<script>$("#errors").hide();</script>
+</body>
+</html>
